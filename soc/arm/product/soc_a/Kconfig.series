@@ -1,0 +1,46 @@
+
+config SOC_SERIES_SOC_A
+	bool "Happy Scrappy Hero Pup family of SoCs"
+	select ARM
+	select SOC_FAMILY_HAPPY_SCRAPPY
+	select CPU_CORTEX_M3
+	select CPU_HAS_ARM_MPU
+	select FLASH
+	help
+	  Enable support for Happy Scrappy
+
+if SOC_SERIES_SOC_A
+
+config HAS_ARM_DIV
+	bool "Has support for the ARM divider"
+	default y
+
+config ARM_DIV
+	int "ARM clock divider value"
+	range 0 7
+
+config AHB_DIV
+	int "AHB clock divider value"
+	range 0 7
+
+config IPG_DIV
+	int "IPG clock divider value"
+	range 0 3
+
+if SERIAL
+
+config UART_PL011
+	default y
+
+config UART_INTERRUPT_DRIVEN
+	default y
+
+config UART_PL011_PORT0
+	default y
+
+config UART_PL011_PORT1
+	default n
+
+endif # SERIAL
+
+endif # SOC_SERIES_SOC_A

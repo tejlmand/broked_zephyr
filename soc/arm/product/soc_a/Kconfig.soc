@@ -1,0 +1,9 @@
+# SOC FAMILY DEFINES
+choice
+	prompt "Happy Scrapp Hero Pup SOC A"
+	depends on SOC_SERIES_SOC_A
+
+config SOC_HAPPY_SCRAPPY_A0
+	bool "Steping A0"
+
+endchoice
