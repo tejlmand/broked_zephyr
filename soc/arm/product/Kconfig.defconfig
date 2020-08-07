@@ -1,1 +1,1 @@
-source "$(SOC_DIR)/$(ARCH)/product/*/Kconfig.defconfig.series"
+rsource "*/Kconfig.defconfig.series"

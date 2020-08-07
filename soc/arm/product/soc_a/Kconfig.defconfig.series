@@ -6,6 +6,6 @@ config SOC_SERIES
 config SOC
 	default "yep" if SOC_IS_HAPPY
 
-source "$(SOC_DIR)/$(ARCH)/product/soc_a/Kconfig.defconfig.soc_a_*"
+rsource "Kconfig.defconfig.soc_a_*"
 
 endif # SOC_SERIES_HAPPY_SCRAPPY

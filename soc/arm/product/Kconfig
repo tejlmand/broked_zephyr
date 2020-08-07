@@ -10,6 +10,6 @@ config SOC_IS_HAPPY
 	bool
 	default n
 
-source "$(SOC_DIR)/$(ARCH)/product/*/Kconfig.soc"
+rsource "*/Kconfig.soc"
 
 endif # SOC_FAMILY_HAPPY_SCRAPPY
